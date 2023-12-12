@@ -30,7 +30,7 @@ function SingleSelect({
         </p>
       </div>
       {showOptions && (
-        <div className="shadow-md flex flex-col space-y-2">
+        <div className="shadow-md shadow-white flex flex-col space-y-2">
           {dropdownOptions?.map((option) => {
             return (
               <div
@@ -42,9 +42,9 @@ function SingleSelect({
                 }}
               >
                 <div className="flex items-center justify-between">
-                  <p>{option}</p>
+                  <p className="text-white">{option}</p>
                   {selectedOption === option && (
-                    <IoMdCheckmark className="mr-[5px]" />
+                    <IoMdCheckmark className="mr-[5px] text-white" />
                   )}
                 </div>
               </div>
