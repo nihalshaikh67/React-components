@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import MultiSelect from "./components/Dropdown/MultiSelect";
+import SingleSelect from "./components/Dropdown/SingleSelect";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex justify-center mt-10">
+      <SingleSelect
+        label="Country"
+        dropdownOptions={["India", "PAK", "USA", "CANADA"]}
+        placeholder="select country"
+        onSelect={(value) => {
+          console.log(value);
+        }}
+      />
+      <MultiSelect
+        label="Games"
+        dropdownOptions={["Cricket", "Tennis", "Yoga", "Gym"]}
+        placeholder="Select Sport"
+        onSelect={(value) => {
+          console.log(value);
+        }}
+      />
     </div>
   );
 }
